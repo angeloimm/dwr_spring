@@ -1,0 +1,15 @@
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "dwr30.dtd">
+<dwr>
+  <allow>
+
+    <create creator="new" javascript="SController" scope="script">
+      <param name="class" value="com.mytest.controller.SController"/>
+    </create>
+
+  <convert converter="bean" match="java.lang.Throwable"/>
+  <convert converter="bean" match="java.lang.StackTraceElement"/>
+
+  <convert match="com.mytest.bean.SBean" converter="bean"/>
+
+  </allow>
+</dwr>
