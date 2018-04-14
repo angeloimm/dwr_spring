@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.mytest.bean.SBean;
 
 @RemoteProxy(name = "SController")
-@Controller
-@RequestMapping("/dwr/*")
+//@Controller
+//@RequestMapping("/dwr/*")
 public class SController {
 
 	private static final Logger logger = LoggerFactory.getLogger(SController.class);
@@ -26,7 +26,7 @@ public class SController {
 	@ResponseBody
 	public String getBeanName() {
 		try {
-			return sbean.beanName;
+			return sbean.getBeanName();
 		} catch (Exception e) {
 			logger.error(e.getLocalizedMessage(), e);
 			return "Error!";
